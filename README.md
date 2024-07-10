@@ -257,7 +257,7 @@ num_layers     = 8
 </pre>
 
 <b>Online augmentation</b><br>
-Disabled our online augmentation. To enable the augmentation, set genetor parameter to True in [model] section.  
+Disabled our online augmentation. To enable the augmentation, set generator parameter to True.  
 <pre>
 [model]
 model         = "TensorflowUNet"
@@ -265,7 +265,7 @@ generator     = False
 </pre>
 
 <b>Loss and metrics functions</b><br>
-Specified "bce_dice_loss" and "dice_coef" for one of metrics.<br>
+Specified "bce_dice_loss" and "dice_coef".<br>
 <pre>
 [model]
 loss           = "bce_dice_loss"
@@ -287,7 +287,7 @@ patience      = 10
 </pre>
 
 <b>Epoch change inference callback</b><br>
-Enabled EpochChange infercned callback.<br>
+Enabled EpochChange infer callback.<br>
 <pre>
 [train]
 epoch_change_infer     = True
@@ -296,7 +296,7 @@ num_infer_images       = 1
 </pre>
 
 By using this EpochChangeInference callback, on every epoch_change, the inference procedure can be called
- for an image in <b>mini_test</b> folder. This will help for you to confirm how the actual inferrence result (inferred mask) will be changing 
+ for an image in <b>mini_test</b> folder. This will help for you to confirm how the actual inference result (inferred mask) will be changing 
 on every epoch_changed timing on your training process.<br> <br> 
 <b>Epoch_change_inference output</b><br>
 <img src="./projects/TensorflowSlightlyFlexibleUNet/Pancreas-T2/asset/epoch_change_infer.png" width="1024" height="auto"><br>
@@ -335,7 +335,7 @@ Evaluation console output:<br>
 <img src="./projects/TensorflowSlightlyFlexibleUNet/Pancreas-T2/asset/evaluate_console_output_at_epoch_75.png" width="720" height="auto">
 <br><br>
 
-The loss (bce_dice_loss) score for this test dataset is low, but dice_coef not so heigh as shown below.<br>
+The loss (bce_dice_loss) score for this test dataset is low, but dice_coef not so high as shown below.<br>
 <pre>
 loss,0.12
 dice_coef,0.7885
