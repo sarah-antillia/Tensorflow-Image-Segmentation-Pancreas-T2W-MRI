@@ -41,7 +41,7 @@ On detail of the ImageMaskDataset, please refer to
 In this experiment, we used the simple UNet Model 
 <a href="./src/TensorflowUNet.py">TensorflowSlightlyFlexibleUNet</a> for this Pancreas-T2 Segmentation.<br>
 As shown in <a href="https://github.com/sarah-antillia/Tensorflow-Image-Segmentation-API">Tensorflow-Image-Segmentation-API</a>.
-you may try other more advanced Tensorflow UNet Models to get better segmentation models:<br>
+you may try other more advanced TensorFlow UNet Models to get better segmentation models:<br>
 <br>
 <li><a href="./src/TensorflowSwinUNet.py">TensorflowSwinUNet.py</a></li>
 <li><a href="./src/TensorflowMultiResUNet.py">TensorflowMultiResUNet.py</a></li>
@@ -91,7 +91,7 @@ Please expand the downloaded ImageMaskDataset and place it under <b>./dataset</b
 <br>
 As shown above, the number of images of train and valid dataset is not necessarily large. 
 Probably, an online dataset augmentation strategy to train 
-this segmentation model may be effective to improve the segmentation accuracy.
+this segmentation model may be effective to improve segmentation accuracy.
 <br>
 
 <br>
@@ -296,8 +296,7 @@ num_infer_images       = 1
 </pre>
 
 By using this EpochChangeInference callback, on every epoch_change, the inference procedure can be called
- for an image in <b>mini_test</b> folder. This will help for you to confirm how the actual inference result (inferred mask) will be changing 
-on every epoch_changed timing on your training process.<br> <br> 
+ for an image in <b>mini_test</b> folder. This will help you confirm how the predicted mask changes at each epoch during your training process.<br> <br> 
 <b>Epoch_change_inference output</b><br>
 <img src="./projects/TensorflowSlightlyFlexibleUNet/Pancreas-T2/asset/epoch_change_infer.png" width="1024" height="auto"><br>
 <br>
